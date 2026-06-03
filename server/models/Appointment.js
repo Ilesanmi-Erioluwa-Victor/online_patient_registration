@@ -1,0 +1,15 @@
+import mongoose from 'mongoose';
+
+const appointmentSchema = new mongoose.Schema(
+  {
+    patient: { type: mongoose.Schema.Types.ObjectId, ref: 'Patient', required: true },
+    doctor: { type: mongoose.Schema.Types.ObjectId, ref: 'User', required: true },
+    scheduledDate: { type: Date, required: true },
+    reason: String,
+    status: { type: String, enum: ['Pending', 'Confirmed', 'Completed', 'Cancelled'], default: 'Pending' },
+    createdBy: { type: mongoose.Schema.Types.ObjectId, ref: 'User' }
+  },
+  { timestamps: true }
+);
+
+export default mongoose.model('Appointment', appointmentSchema);

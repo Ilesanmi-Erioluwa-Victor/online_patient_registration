@@ -1,0 +1,56 @@
+# Dependencies
+node_modules/
+client/node_modules/
+server/node_modules/
+
+# Environment variables and local secrets. Keep examples for documentation.
+.env
+.env.*
+**/.env
+**/.env.*
+!.env.example
+!**/.env.example
+
+# Build output
+dist/
+build/
+.vite/
+client/dist/
+server/dist/
+
+# Runtime uploads
+server/uploads/*
+!server/uploads/.gitkeep
+
+# Logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# Caches
+.cache/
+.eslintcache
+.npm/
+.vite/
+
+# OS and editor files
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Coverage
+coverage/
+
+# Local databases and generated files
+*.db
+*.sqlite
+*.sqlite3
+
+# Deployment/tooling metadata
+.vercel/
+.netlify/

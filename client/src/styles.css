@@ -1,0 +1,26 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --primary: #0B6E4F;
+  --primary-light: #13A068;
+  --primary-dark: #084D37;
+  --primary-pale: #E6F4EF;
+  --accent: #1A73E8;
+  --neutral-50: #F8FAFB;
+}
+
+body {
+  margin: 0;
+  background: #F8FAFB;
+  color: #0F172A;
+  font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+}
+
+@media print {
+  .no-print { display: none !important; }
+  body { background: white; }
+  main { padding: 0 !important; }
+  .print-card { box-shadow: none !important; border: 1px solid #C8D2DA !important; }
+}
